@@ -1,7 +1,10 @@
 .main-header{
     display: flex;
     justify-content: space-between;
-    height: 125px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 40px;
+    background-color: aqua;
     >*{
         display:flex;
         align-items: center;

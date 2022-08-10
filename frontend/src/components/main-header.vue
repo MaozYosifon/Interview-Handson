@@ -1,6 +1,6 @@
 <template>
     <header class="main-header">
-        <div class="logo">Logo Img</div>
+        <div class="logo">Reviews work</div>
         <nav>
             <RouterLink to="/main">Main</RouterLink>
             <RouterLink to="/">Page1</RouterLink>
