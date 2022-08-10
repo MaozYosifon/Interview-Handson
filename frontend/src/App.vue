@@ -2,7 +2,7 @@
 <template>
   <div class="app-vue main-layout">
     <main-header />
-    <main v-if="reviews" :reviews="reviews" class="app-container">
+    <main :reviews="reviews" class="app-container">
       <RouterView />
     </main>
   </div>
@@ -24,10 +24,7 @@ export default {
   },
   methods: {},
   computed: {
-    reviews() {
-      console.log(this.$store.getters.reviews);
-      return this.$store.getters.reviews
-    }
+
   },
   unmounted() { },
 };

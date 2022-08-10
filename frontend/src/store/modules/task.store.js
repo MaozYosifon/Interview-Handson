@@ -33,8 +33,8 @@ export const taskStore = {
                 copy.avatar = avatar
                 // return
                 console.log(copy);
-                await reviewService.add(copy)
-                // commit('addReview', { reivew: copy })
+                // await reviewService.add(copy)
+                commit('addReview', { reivew: copy })
             } catch (error) {
 
             }

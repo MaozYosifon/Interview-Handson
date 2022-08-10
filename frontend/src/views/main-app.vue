@@ -7,7 +7,7 @@
             </form>
             <button @click.stop.prevent="submitReview">Submit</button>
         </div>
-        <reviewList :reviews="reviews"></reviewList>
+        <reviewList v-if="reviews" :reviews="reviews"></reviewList>
     </div>
 
 </template>
@@ -16,7 +16,6 @@ import reviewList from '../components/review-list.vue';
 export default {
     name: 'main-app',
     props: {
-        reviews: Array
     },
     components: {
         reviewList
@@ -39,7 +38,10 @@ export default {
         }
     },
     computed: {
-
+        reviews() {
+            console.log(this.$store.getters.reviews);
+            return this.$store.getters.reviews
+        }
     },
     unmounted() { },
 };

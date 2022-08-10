@@ -16,7 +16,9 @@ export default {
     data() {
         return {};
     },
-    created() { },
+    created() {
+        console.log(this.reviews);
+    },
     methods: {},
     computed: {},
     unmounted() { },
