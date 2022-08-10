@@ -2,7 +2,7 @@
 <template>
   <div class="app-vue main-layout">
     <main-header />
-    <main class="app-container">
+    <main v-if="reviews" :reviews="reviews" class="app-container">
       <RouterView />
     </main>
   </div>
@@ -19,9 +19,15 @@ export default {
   data() {
     return {};
   },
-  created() { },
+  created() {
+    this.$store.dispatch('getReviews')
+  },
   methods: {},
-  computed: {},
+  computed: {
+    reviews() {
+      return this.$store.getters.reviews
+    }
+  },
   unmounted() { },
 };
 </script>

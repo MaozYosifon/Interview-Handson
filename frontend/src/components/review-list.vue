@@ -1,14 +1,17 @@
 <template>
     <div class="review-list-container">
-
+        <reviewPrev v-for="review in revies" :review="review" :key="review._id"></reviewPrev>
 
     </div>
 
 </template>
  <script>
+import reviewPrev from './review-prev.vue';
 export default {
     name: 'reviewList',
-    components: {},
+    components: {
+        reviewPrev
+    },
     data() {
         return {};
     },
@@ -19,4 +22,4 @@ export default {
 };
 </script>
  <style>
- </style>
+</style>

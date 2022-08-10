@@ -21,11 +21,36 @@ export const taskService = {
     save,
     getEmptyTask,
     performTask,
-    toggleWorker
+    toggleWorker,
+    add,
+    getAvatar
 }
 
-async function query(filterBy = {}) {
-    const res = await httpService.get(`task`, { params: filterBy })
+async function getAvatar(email) {
+    let hash = email.toLowerCase()
+    let echo = md5(hash)
+    try {
+        const res = await Axios.get(`https://www.gravatar.com/avatar/` + hash)
+        console.log(res.data);
+    } catch (error) {
+        console.log(error);
+    }
+
+
+}
+
+async function add(review) {
+    try {
+        const res = await httpService.post(`review/`, review)
+        return res
+    } catch (error) {
+        console.log(error);
+    }
+}
+async function query() {
+    //filterBy = {}
+    // const res = await httpService.get(`review`, { params: filterBy })
+    const res = await httpService.get(`review`)
     return res
 
     //     return storageService.query(KEY)
