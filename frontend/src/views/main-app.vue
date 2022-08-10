@@ -7,13 +7,19 @@
             </form>
             <button @click="submitReview">Submit</button>
         </div>
+        <reviewList :reviews="reviews"></reviewList>
     </div>
+
 </template>
  <script>
-
+import reviewList from '../components/review-list.vue';
 export default {
     name: 'main-app',
+    props: {
+        reviews: Array
+    },
     components: {
+        reviewList
     },
     data() {
         return {
@@ -32,9 +38,11 @@ export default {
             this.$store.dispatch('addReview', { review })
         }
     },
-    computed: {},
+    computed: {
+
+    },
     unmounted() { },
 };
 </script>
  <style>
- </style>
+</style>
