@@ -7,7 +7,7 @@ module.exports = {
 }
 
 // Database Name
-const dbName = 'task_db'
+const dbName = 'feed_db'
 
 var dbConn = null
 

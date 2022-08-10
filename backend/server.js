@@ -21,14 +21,9 @@ if (process.env.NODE_ENV === 'production') {
 
 const { setupSocketAPI } = require('./services/socket.service')
 
-const taskRoutes = require('./api/task/task.routes')
+const reviewRoutes = require('./api/review/review.routes')
 
-
-// routes
-// const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
-// app.all('*', setupAsyncLocalStorage)
-
-app.use('/api/task', taskRoutes)
+app.use('/api/review', reviewRoutes)
 
 setupSocketAPI(http)
 
