@@ -1,0 +1,14 @@
+.review-list-container{
+    position: fixed;
+    left: 35%;
+    top: 50%;
+    width: 550px;
+    height: 1505px;
+    // background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    // width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
