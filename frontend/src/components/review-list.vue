@@ -1,9 +1,7 @@
 <template>
     <div class="review-list-container">
         <reviewPrev v-for="review in revies" :review="review" :key="review._id"></reviewPrev>
-
     </div>
-
 </template>
  <script>
 import reviewPrev from './review-prev.vue';

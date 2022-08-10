@@ -1,9 +1,9 @@
 <template>
     <div class="review">
-        <div class="review-img">IMG</div>
+        <img review-img :src="review.img" alt="">
         <div class="review-content">
-            <div class=review-email></div>
-            <div class="review-txt"></div>
+            <div class=review-email>{{review.email}}</div>
+            <div class="review-txt">{{review.txt}}</div>
         </div>
     </div>
 

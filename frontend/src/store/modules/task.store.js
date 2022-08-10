@@ -31,9 +31,10 @@ export const taskStore = {
                 let copy = JSON.parse(JSON.stringify(review))
                 const avatar = await reviewService.getAvatar(review.email)
                 copy.avatar = avatar
-                return
+                // return
+                console.log(copy);
                 await reviewService.add(copy)
-                commit('addReview', { reivew: copy })
+                // commit('addReview', { reivew: copy })
             } catch (error) {
 
             }

@@ -10,7 +10,7 @@ module.exports = {
 async function query(filterBy) {
     console.log('inQuery');
     try {
-        const criteria = _buildCriteria(filterBy)
+        const criteria = _buildCriteria(filterBy = {})
         var tasks = await collection.find(criteria).toArray()
 
         const collection = await dbService.getCollection('review')

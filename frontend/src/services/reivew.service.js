@@ -1,5 +1,6 @@
 import { httpService } from './http.service.js'
-import { md5 } from "blueimp-md5";
+// import { md5 } from "blueimp-md5";
+import md5 from 'md5';
 // import { storageService } from './storage-service.js'
 // import { utilService } from './util-service.js'
 // import axios from 'axios';
@@ -28,13 +29,13 @@ export const reviewService = {
 }
 
 async function getAvatar(email) {
+    // contains: "dc599a9972fde3045dab59dbd1ae170b"
     let hash = email.toLowerCase()
-    console.log('HASHING');
-    let echo = md5(hash)
-    console.log(echo);
+    let echo = md5(hash);
     try {
         const res = await Axios.get(`https://www.gravatar.com/avatar/` + echo)
         console.log(res.data);
+        return res.data
     } catch (error) {
         console.log(error);
     }
