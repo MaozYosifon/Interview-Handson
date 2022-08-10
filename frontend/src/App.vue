@@ -20,11 +20,12 @@ export default {
     return {};
   },
   created() {
-    this.$store.dispatch('getReviews')
+    // this.$store.dispatch('getReviews')
   },
   methods: {},
   computed: {
     reviews() {
+      console.log(this.$store.getters.reviews);
       return this.$store.getters.reviews
     }
   },

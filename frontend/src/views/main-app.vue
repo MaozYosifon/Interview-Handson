@@ -5,7 +5,7 @@
                 <input v-model="email" placeholder="Email" type="email">
                 <textarea v-model="txtArea" placeholder="Massage" name="" id="" cols="30" rows="10"></textarea>
             </form>
-            <button @click="submitReview">Submit</button>
+            <button @click.stop.prevent="submitReview">Submit</button>
         </div>
         <reviewList :reviews="reviews"></reviewList>
     </div>

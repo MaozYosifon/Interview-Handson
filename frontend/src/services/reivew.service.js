@@ -1,4 +1,5 @@
 import { httpService } from './http.service.js'
+import { md5 } from "blueimp-md5";
 // import { storageService } from './storage-service.js'
 // import { utilService } from './util-service.js'
 // import axios from 'axios';
@@ -14,7 +15,7 @@ const API = (process.env.NODE_ENV !== 'development')
 
 const KEY = 'tasks_db'
 
-export const taskService = {
+export const reviewService = {
     query,
     getById,
     remove,
@@ -28,7 +29,9 @@ export const taskService = {
 
 async function getAvatar(email) {
     let hash = email.toLowerCase()
+    console.log('HASHING');
     let echo = md5(hash)
+    console.log(echo);
     try {
         const res = await Axios.get(`https://www.gravatar.com/avatar/` + echo)
         console.log(res.data);

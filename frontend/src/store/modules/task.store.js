@@ -1,11 +1,15 @@
-import { fireBaseService } from "../../services/firebase";
-import { reviewService } from '../../services/reivew.service'
-import { socketService } from '../../services/socket.service'
+import { reviewService } from '../../services/reivew.service.js'
+// import { socketService } from '../../services/socket.service'
 const colName = 'task'
 
 export const taskStore = {
     state: {
-        reviews: null,
+        reviews: [{
+            _id: '1234',
+            txt: '12345',
+            email: '12345@example.com',
+            avatar: 'http://example.com/images/default',
+        }]
     },
     getters: {
         reviews(state) {
@@ -27,6 +31,7 @@ export const taskStore = {
                 let copy = JSON.parse(JSON.stringify(review))
                 const avatar = await reviewService.getAvatar(review.email)
                 copy.avatar = avatar
+                return
                 await reviewService.add(copy)
                 commit('addReview', { reivew: copy })
             } catch (error) {
