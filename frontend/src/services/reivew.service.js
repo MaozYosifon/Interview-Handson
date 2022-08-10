@@ -30,7 +30,7 @@ async function getAvatar(email) {
     let hash = email.toLowerCase()
     let echo = md5(hash)
     try {
-        const res = await Axios.get(`https://www.gravatar.com/avatar/` + hash)
+        const res = await Axios.get(`https://www.gravatar.com/avatar/` + echo)
         console.log(res.data);
     } catch (error) {
         console.log(error);
