@@ -1,0 +1,22 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    height: 125px;
+    >*{
+        display:flex;
+        align-items: center;
+    }
+    nav{
+        a{
+            color: $clr1;
+            text-decoration: none;
+            &:not(:last-of-type){
+                margin-inline-end:58px;
+            }
+            &.active {
+                background-color: $clr1;
+                color: $clr2;
+            }
+        }
+    }
+}

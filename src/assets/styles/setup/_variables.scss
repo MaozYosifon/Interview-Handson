@@ -1,0 +1,43 @@
+// COLOR PALETTE
+//SITE
+$clr1: #f4f4f4;
+$clr2: aliceblue;
+$clr3: #0a1e3f;
+$clr4: #f6f5edbe;
+$clr5: #fff;
+$clr6: #ddd;
+
+//TAGS
+$clrTag1: #5588a3;
+$clrTag2: #e2a4bc;
+$clrTag3: #f6da63;
+$clrTag4: #0c9463;
+$clrTag5: #da2d2d;
+$clrTag6: #db9109;
+
+//BTNS 
+$btnClr1: #007bff;
+$btnClr2: #dc3545;
+$btnClr3: #28a745;
+$btnClr4: #ffc107;
+// $btnClr5:;
+
+// LAYOUT BREAKPOINTS
+$break-mobile: 540px;
+$break-narrow: 740px;
+$break-normal: 985px;
+$break-wide: 1300px;
+
+
+
+// LAYOUT
+$layoutPadding: 20px;
+
+// // LAYOUT BREAKPOINTS
+// $break-narrow: 1200px;
+// $break-normal: 1360px;
+// $break-wide: 1920px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;

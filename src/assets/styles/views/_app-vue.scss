@@ -1,0 +1,10 @@
+.app-vue {
+    // background-image: url("./../images/bg-curvy-desktop.svg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-color: $clr2;
+
+    .app-container {
+        height: calc(100vh - 125px);
+    }
+}
